@@ -1,5 +1,11 @@
 const RUNTIME = 'runtime';
-const CURRENT_CACHES = [RUNTIME];
+let CURRENT_CACHES = localStorage.getItem('CURRENT_CACHES');
+if (CURRENT_CACHES) {
+  CURRENT_CACHES = JSON.parse(caches);
+} else {
+  CURRENT_CACHES = [RUNTIME];
+  localStorage.setItem('CURRENT_CACHES', JSON.stringify(CURRENT_CACHES));
+}
 const RUNTIME_ORIGINS = [
   'https://maxcdn.bootstrapcdn.com'
 ];
@@ -37,6 +43,7 @@ self.addEventListener('fetch', event => {
     CACHE_NAME = reqUrl.pathname.split('/')[1];
     if (!CURRENT_CACHES.includes(CACHE_NAME)) {
       CURRENT_CACHES.push(CACHE_NAME);
+      localStorage.setItem('CURRENT_CACHES', JSON.stringify(CURRENT_CACHES));
     }
   }
   event.respondWith(
