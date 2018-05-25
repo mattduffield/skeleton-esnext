@@ -86,5 +86,23 @@
     },
     "devDependencies": {}
   },
-  "dependencies": {}
+  "dependencies": {
+    "aurelia-animator-css": "^1.0.0",
+    "aurelia-bootstrapper": "1.0.0",
+    "aurelia-fetch-client": "1.0.0",
+    "aurelia-framework": "1.0.0",
+    "aurelia-history-browser": "1.0.0",
+    "aurelia-loader-default": "1.0.0",
+    "aurelia-logging-console": "1.0.0",
+    "aurelia-pal-browser": "1.0.0",
+    "aurelia-polyfills": "1.0.0",
+    "aurelia-router": "1.0.0",
+    "aurelia-templating-binding": "1.0.0",
+    "aurelia-templating-resources": "1.0.0",
+    "aurelia-templating-router": "1.0.0",
+    "bluebird": "3.4.1",
+    "bootstrap": "3.3.6",
+    "font-awesome": "4.6.3",
+    "jquery": "2.2.4"
+  }
 }
